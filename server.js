@@ -1,19 +1,13 @@
-// require("dotenv").config();
+import dotenv from 'dotenv';
+dotenv.config();
 import  express  from "express";
 import  http  from "http";
 import  bodyParser  from "body-parser";
 import  cors  from 'cors';
-// import { express } from "express";
-// const express = require('express');
 const app = express();
-// const http = require('http');
 // const path = require('path');
-// const { Server } = require('socket.io');
-// const ACTIONS = require('./src/Actions');
-// const bodyParser = require('body-parser');
 const server = http.createServer(app);
 // const io = new Server(server);
-// const cors = require('cors');
 
 
 const corsOptions = {
