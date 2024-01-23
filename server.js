@@ -1,14 +1,15 @@
-require("dotenv").config();
-
-const express = require('express');
+import dotenv from 'dotenv';
+dotenv.config();
+import  express  from "express";
+import  http  from "http";
+import  bodyParser  from "body-parser";
+import  cors  from 'cors';
 const app = express();
-const http = require('http');
-const ACTIONS = require('./src/Actions');
-const bodyParser = require('body-parser');
+// const path = require('path');
 const server = http.createServer(app);
-const cors = require('cors');
+// const io = new Server(server);
 
-//setting cors error-------------------------------------------------------------------------------------------------------
+
 const corsOptions = {
     origin: 'http://localhost:5173',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -25,9 +26,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-
-
-
-
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+
