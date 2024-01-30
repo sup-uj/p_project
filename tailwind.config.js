@@ -47,8 +47,5 @@ export default {
   plugins: [require('flowbite/plugin')],
 }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 614e51030bd2ffd54b7ffbe8d3b6121cb04ab3bc

@@ -1,18 +1,10 @@
 #root {
-<<<<<<< HEAD
-  max-width: 1280px;
-=======
-  max-width: 3000px;
->>>>>>> 614e51030bd2ffd54b7ffbe8d3b6121cb04ab3bc
+  max-width: screen;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
-<<<<<<< HEAD
-
-=======
 /* 
->>>>>>> 614e51030bd2ffd54b7ffbe8d3b6121cb04ab3bc
 .logo {
   height: 6em;
   padding: 1.5em;

@@ -20,14 +20,21 @@ import SoldPage from './pages/SoldPage.jsx';
 import LentPage from './pages/LentPage.jsx';
 import PurchasedPage from './pages/PurchasedPage.jsx';
 import BorrowedPage from './pages/BorrowedPage.jsx';
+import NavSection from './components/navbar';
+import Login from './pages/loginPage.jsx';
+import Signup from './pages/signupPage.jsx';
 
 function App() {
 
   return (
     <>
+      
       <BrowserRouter>
+        {/* <NavSection></NavSection> */}
         <Routes>
           <Route  path="/" element={<HomePage/>}></Route>
+          <Route path='/login' element={<Login/>}></Route>
+          <Route path='/signup' element={<Signup/>}></Route>
           <Route  path="/sidebar" element={<SideBarPage/>}></Route>
           <Route  path="/profile" element={<ProfilePage/>}></Route>
           <Route  path="/profileupdate" element={<ProfileUpdatePage/>}></Route>
@@ -41,6 +48,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       {/* <ProfilePage/> */}
+      
     </>
   )
 }
