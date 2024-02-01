@@ -14,7 +14,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className='z-100'>
-        <CarouselSection></CarouselSection>
+        {/* <CarouselSection></CarouselSection> */}
       </div>
     </div>
 

@@ -3,11 +3,19 @@
 import NavSection from '../components/navbar.jsx'
 import Sbar from "../components/sidebar.jsx"
 import SellItem from '../components/SellItem.jsx';
-
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 
 const SellItemPage = () => {
+  const navigate=useNavigate();
+  useEffect(()=>{
+    if(!localStorage.getItem('token')){
+      navigate('/login')
+    }
+  },[])
+
   return (
     <>
         <NavSection/>
