@@ -32,7 +32,7 @@ const LoginSection = () => {
 
     return (
         <div className='mt-[10rem]'>
-            <form className="max-w-sm mx-auto bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
+            <div className="max-w-sm mx-auto bg-white rounded-lg shadow dark:bg-gray-800 sm:p-5">
                 <div className="mb-5 ">
                     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                         Username
@@ -89,7 +89,7 @@ const LoginSection = () => {
                     <Button color="light"><Link to='/signup'>SignUp</Link></Button>
                 </div>
 
-            </form>
+            </div>
         </div>
     );
 };

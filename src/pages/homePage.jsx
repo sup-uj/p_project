@@ -28,13 +28,28 @@ const HomePage = () => {
     })
   }, [])
 
+  const [search ,setsearch]= useState('');
+  const searchItem=(value)=>{
+    console.log(value);
+    setsearch(value);
+  }
 
+  const click=()=>{
+    console.log('clicked');
+    console.log('products',products);
+    let filteredPdts=products.filter((item)=>{
+      if(item.name.toLowerCase().includes(search.toLowerCase())||item.price.toLowerCase().includes(search.toLowerCase())||item.description.toLowerCase().includes(search.toLowerCase())||item.category.toLowerCase().includes(search.toLowerCase())){
+        return item;
+      }
+    })
+    setproducts(filteredPdts);
+  }
 
   return (
     <>
-      <NavSection />
+      <NavSection search={search} searchItem={searchItem} click={click} />
       <HeroSection ></HeroSection>
-      <div className='flex justify-center flex-wrap'>
+      <div className='flex justify-center flex-wrap gap-2'>
         {products && products.length > 0 && products.map((item, index) => {
         return (
           <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -48,7 +63,8 @@ const HomePage = () => {
             <div className="px-5 pb-5">
               <a href="#">
                 <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
-                  <span>{item.name}</span> | {item.description}
+                  <span >{item.name}</span> | {item.description}
+
                 </h5>
               </a>
               <div className="flex items-center mt-2.5 mb-5">
