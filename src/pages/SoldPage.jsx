@@ -1,4 +1,4 @@
-import NavSection from '../components/navbar.jsx'
+import NavSection from '../components/nav.jsx'
 import Sbar from "../components/sidebar.jsx"
 
 

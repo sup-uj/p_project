@@ -1,6 +1,6 @@
 // import { View, Text } from 'react-native'
 // import React from 'react'
-import NavSection from '../components/navbar.jsx'
+import NavSection from '../components/nav.jsx'
 import Sbar from "../components/sidebar.jsx"
 // import Profile from '../components/profile.jsx';
 import ProfileUpdate from '../components/profileupdate.jsx';

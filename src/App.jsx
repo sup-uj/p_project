@@ -20,7 +20,7 @@ import SoldPage from './pages/SoldPage.jsx';
 import LentPage from './pages/LentPage.jsx';
 import PurchasedPage from './pages/PurchasedPage.jsx';
 import BorrowedPage from './pages/BorrowedPage.jsx';
-import NavSection from './components/navbar';
+import NavSection from './components/nav';
 import Login from './pages/loginPage.jsx';
 import Signup from './pages/signupPage.jsx';
 

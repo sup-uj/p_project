@@ -1,5 +1,5 @@
 import React from "react";
-import NavSection from "../components/navbar";
+import NavSection from '../components/nav.jsx'
 import LoginSection from "../Components/login";
 
 const Login = () => {

@@ -29,7 +29,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 app.use('/uploads', express.static(path.join(__dirname,'uploads')));
-mongoose.connect('mongodb://localhost:27017/Shoppers');
+
+mongoose.connect('mongodb://127.0.0.1:27017/Shoppers');
 
 const Users = mongoose.model('Users', { username: String, password: String });
 const saleProducts= mongoose.model('saleProducts',{name: String, category: String, price: String, quantity: String, description: String, image: String });
