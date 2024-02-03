@@ -54,24 +54,38 @@ const HomePage = () => {
 
   const click = () => {
     // console.log('clicked');
-    console.log('temp1', temp_pdt);
+    // console.log('temp1', temp_pdt);
     settemp_pdt(products);
-    console.log('products', products);
-    console.log('temp', temp_pdt);
+    // console.log('products', products);
+    // console.log('temp', temp_pdt);
     let filteredPdts = products.filter((item) => {
       if (item.name.toLowerCase().includes(search.toLowerCase()) || item.price.toLowerCase().includes(search.toLowerCase()) || item.description.toLowerCase().includes(search.toLowerCase()) || item.category.toLowerCase().includes(search.toLowerCase())) {
         return item;
       }
     })
-    console.log('filtered',filteredPdts);
+    // console.log('filtered',filteredPdts);
     settemp_pdt(filteredPdts);
-    console.log('temp_pdt',temp_pdt);
+    // console.log('temp_pdt',temp_pdt);
+  }
+
+  const filters = (value) => {
+    settemp_pdt(products);
+    // console.log('products', value);
+    // console.log('temp', temp_pdt);
+    let filteredPdts = products.filter((item) => {
+      if ( item.category == value) {
+        return item;
+      }
+    })
+    // console.log('filtered',filteredPdts);
+    settemp_pdt(filteredPdts);
+    // console.log('temp_pdt',temp_pdt);
   }
 
   return (
     <>
       <NavSection search={search} searchItem={searchItem} click={click} />
-      <Category />
+      <Category filters = {filters} />
       <HeroSection ></HeroSection>
       <div className='flex justify-center flex-wrap gap-2'>
         {temp_pdt && temp_pdt.length > 0 && temp_pdt.map((item, index) => {
